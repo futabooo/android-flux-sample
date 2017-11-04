@@ -1,0 +1,5 @@
+<resources>
+  <string name="app_name">android flux sample</string>
+  <string name="count_up">count up</string>
+  <string name="count_down">count down</string>
+</resources>
