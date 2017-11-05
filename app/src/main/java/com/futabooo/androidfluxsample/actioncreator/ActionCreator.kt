@@ -1,4 +1,4 @@
-package com.futabooo.androidfluxsample.action
+package com.futabooo.androidfluxsample.actioncreator
 
 import com.futabooo.androidfluxsample.dispatcher.Dispatcher
 

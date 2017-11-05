@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.AppCompatButton
 import android.widget.TextView
 import com.futabooo.androidfluxsample.R
-import com.futabooo.androidfluxsample.action.CountActionCreator
+import com.futabooo.androidfluxsample.actioncreator.CountActionCreator
 import com.futabooo.androidfluxsample.dispatcher.Dispatcher
 import com.futabooo.androidfluxsample.store.CountStore
 import com.futabooo.androidfluxsample.store.Store
@@ -18,7 +18,9 @@ class MainActivity : AppCompatActivity(), Store.StoreChangeListener {
 
   private val dispatcher by lazy { Dispatcher }
   private val countStore by lazy { CountStore(this) }
-  private val countActionCreator by lazy { CountActionCreator(dispatcher) }
+  private val countActionCreator by lazy {
+    CountActionCreator(dispatcher)
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
