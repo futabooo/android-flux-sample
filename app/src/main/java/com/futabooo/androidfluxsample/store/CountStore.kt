@@ -6,6 +6,7 @@ import com.futabooo.androidfluxsample.action.CountAction
 class CountStore(listener: StoreChangeListener) : Store(listener) {
 
   var count: Int = 0
+    private set
 
   override fun changeEvent(): StoreChangeEvent {
     return CountStoreChangeEvent()
