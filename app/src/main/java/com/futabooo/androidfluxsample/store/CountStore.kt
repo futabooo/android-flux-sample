@@ -1,7 +1,7 @@
 package com.futabooo.androidfluxsample.store
 
 import com.futabooo.androidfluxsample.action.Action
-import com.futabooo.androidfluxsample.action.CountAction
+import com.futabooo.androidfluxsample.action.CountActionType
 
 class CountStore(listener: StoreChangeListener) : Store(listener) {
 
@@ -14,11 +14,11 @@ class CountStore(listener: StoreChangeListener) : Store(listener) {
 
   override fun onAction(action: Action) {
     when (action.type) {
-      CountAction.COUNT_UP -> {
+      CountActionType.COUNT_UP -> {
         countUp(action.data as Int)
         emitStoreChange()
       }
-      CountAction.COUNT_DOWN -> {
+      CountActionType.COUNT_DOWN -> {
         countDown(action.data as Int)
         emitStoreChange()
       }
